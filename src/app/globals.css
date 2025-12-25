@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #050505;
+  --color-foreground: #F9F9F7;
+  --color-sage: #A4C5B0;
+  --color-bone: #F9F9F7;
+  --color-obsidian: #050505;
+  --color-charcoal: #1A1A1A;
+  
+  --font-plus-jakarta: var(--font-plus-jakarta);
+}
+
+:root {
+  --background: #050505;
+  --foreground: #F9F9F7;
+  --sage: #A4C5B0;
+  --bone: #F9F9F7;
+  --font-size-base: 22px;
+  --accent: var(--sage);
+}
+
+/* Light Mode Variables */
+.light-mode {
+  --background: #F9F9F7;
+  --foreground: #050505;
+  --bone: #050505;
+  --obsidian: #F9F9F7;
+}
+
+/* Simplicity Mode (High Contrast Focus) */
+.simplicity-mode {
+  --background: #000000 !important;
+  --foreground: #FFFF00 !important;
+  --font-size-base: 26px !important;
+}
+
+.simplicity-mode * {
+  animation: none !important;
+  transition: none !important;
+  font-family: sans-serif !important;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plus-jakarta), Arial, sans-serif;
+  font-size: var(--font-size-base);
+  overflow-x: hidden;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Accessibility: Focus States */
+*:focus-visible {
+  outline: 4px solid var(--sage);
+  outline-offset: 4px;
+}
+
+/* Glassmorphism Refinement */
+.glass-aperture {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.light-mode .glass-aperture {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography Scale */
+.text-hero-headline {
+  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.text-section-headline {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Senior-Friendly Touch Targets */
+.touch-zone {
+  min-height: 72px;
+  padding: 0 2rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.glow-sage {
+  background: var(--sage);
+  color: #050505;
+  border: none;
+}
+
+.glow-sage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(164, 197, 176, 0.3);
+}
+
+.light-mode .glow-sage {
+  background: #1A1A1A;
+  color: #FFFFFF;
+}
+
+/* Layout Utilities */
+.container-premium {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Progress Bar */
+.harmony-progress {
+  width: 4px;
+  background: var(--sage);
+  border-radius: 2px;
+}
+
+.harmony-step-node {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--sage);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
