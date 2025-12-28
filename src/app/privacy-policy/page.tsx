@@ -2,7 +2,7 @@
 
 import React from "react";
 import Header from "@/components/Header";
-import { ShieldCheck, Lock, EyeOff, UserCheck, CheckCircle2, External } from "lucide-react";
+import { ShieldCheck, Lock, EyeOff, UserCheck, CheckCircle2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export default function PrivacyPolicy() {
@@ -213,53 +213,7 @@ export default function PrivacyPolicy() {
                     <div className="flex-1">
                       <h3 className="text-2xl font-black mb-2 group-hover:text-sage transition-colors flex items-center gap-2">
                         {resource.title}
-                        <External size={18} className="opacity-60 group-hover:opacity-100 transition-opacity" />
-                      </h3>
-                      <p className="text-lg text-foreground/50 font-bold">{resource.description}</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Resources Section */}
-        <section className="mb-40">
-          <h2 className="text-4xl font-black mb-8">Learn More About Radar Technology & Privacy</h2>
-          <p className="text-xl text-foreground/60 font-bold mb-8 leading-relaxed">
-            We use industry-leading radar technology that prioritizes privacy. Here are trusted resources that explain how radar sensors work and why they're superior to cameras for senior care:
-          </p>
-          <div className="space-y-4">
-            {[
-              {
-                title: "NY Times Wirecutter: Smart Technology for Seniors",
-                description: "Comprehensive review of privacy-focused smart home technology options for seniors.",
-                url: "https://www.nytimes.com/wirecutter/reviews/smart-technology-for-seniors/"
-              },
-              {
-                title: "NextPit: Radar Sensors & Privacy in Smart Homes",
-                description: "Technical breakdown of how radar sensors protect privacy while ensuring safety.",
-                url: "https://www.nextpit.com/radar-sensors-smart-home-privacy-seniors"
-              },
-              {
-                title: "The Verge: Radar Technology Launch News",
-                description: "Industry news about medical-grade radar devices for fall detection and privacy.",
-                url: "https://www.theverge.com/2023/4/17/23686246/att-cherish-serenity-medical-radar-device-monitor-falls-privacy"
-              }
-            ].map((resource, i) => (
-              <div key={i} className="p-8 rounded-[40px] glass-aperture border border-white/5 hover:border-sage/20 transition-all">
-                <a 
-                  href={resource.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-black mb-2 group-hover:text-sage transition-colors flex items-center gap-2">
-                        {resource.title}
-                        <External size={18} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                        <ExternalLink size={18} className="opacity-60 group-hover:opacity-100 transition-opacity" />
                       </h3>
                       <p className="text-lg text-foreground/50 font-bold">{resource.description}</p>
                     </div>
