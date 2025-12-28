@@ -17,23 +17,23 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
-      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 flex justify-between items-center">
-        <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 min-w-0">
+      <div className="max-w-[1920px] mx-auto px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 flex justify-between items-center">
+        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 min-w-0">
           <Link href="/" className="group flex flex-col shrink-0">
-            <span className="text-lg sm:text-xl lg:text-2xl font-black tracking-tighter text-bone flex items-center leading-none">
+            <span className="text-base sm:text-lg lg:text-xl font-black tracking-tighter text-bone flex items-center leading-none">
               Indepe<span className="text-sage">NEST</span>
             </span>
-            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-sage/60 group-hover:text-sage transition-colors leading-none mt-0.5">
+            <span className="text-[7px] sm:text-[8px] font-black uppercase tracking-[0.2em] text-sage/60 group-hover:text-sage transition-colors leading-none mt-0.5">
               Secure Smart Homes
             </span>
           </Link>
           
-          <nav className="hidden xl:flex gap-3 xl:gap-5 items-center">
+          <nav className="hidden xl:flex gap-2 xl:gap-3 items-center">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 href={link.href} 
-                className="hover:text-sage transition-colors font-extrabold text-bone/60 text-[10px] lg:text-xs whitespace-nowrap"
+                className="hover:text-sage transition-colors font-extrabold text-bone/60 text-[9px] lg:text-[10px] whitespace-nowrap"
               >
                 {link.name}
               </Link>
@@ -41,12 +41,12 @@ const Header = () => {
           </nav>
         </div>
 
-        <div className="flex items-center gap-3 lg:gap-6 shrink-0">
-          <Link href="tel:+14077905891" className="hidden sm:block text-bone/60 font-black text-xs hover:text-sage transition-colors">
+        <div className="flex items-center gap-2 lg:gap-4 shrink-0">
+          <Link href="tel:+14077905891" className="hidden sm:block text-bone/60 font-black text-[10px] hover:text-sage transition-colors">
             407-790-5891
           </Link>
           <Link href="tel:+14077905891">
-            <button className="h-10 px-5 rounded-lg bg-sage text-obsidian font-black hover:scale-105 transition-all uppercase tracking-tighter text-[10px] sm:text-xs shrink-0">
+            <button className="h-8 px-3 sm:px-4 rounded-md bg-sage text-obsidian font-black hover:scale-105 transition-all uppercase tracking-tighter text-[9px] sm:text-[10px] shrink-0">
               Secure Your Nest
             </button>
           </Link>
@@ -54,10 +54,10 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden w-10 h-10 flex items-center justify-center text-bone hover:text-sage transition-colors"
+            className="xl:hidden w-8 h-8 flex items-center justify-center text-bone hover:text-sage transition-colors"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -65,13 +65,13 @@ const Header = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="xl:hidden border-t border-white/10 bg-background/95 backdrop-blur-md">
-          <nav className="px-4 py-6 space-y-4">
+          <nav className="px-3 py-4 space-y-2">
             {navLinks.map((link) => (
               <Link 
                 key={link.name} 
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 hover:text-sage transition-colors font-extrabold text-bone/60 text-lg"
+                className="block py-2 hover:text-sage transition-colors font-extrabold text-bone/60 text-base"
               >
                 {link.name}
               </Link>

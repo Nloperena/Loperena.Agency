@@ -16,7 +16,7 @@
   --foreground: #F9F9F7;
   --sage: #A4C5B0;
   --bone: #F9F9F7;
-  --font-size-base: 18px;
+  --font-size-base: 16px;
   --accent: var(--sage);
 }
 
@@ -79,14 +79,14 @@ body {
 
 /* Typography Scale */
 .text-hero-headline {
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: clamp(1.75rem, 5vw, 4rem);
   line-height: 1;
   font-weight: 800;
   letter-spacing: -0.04em;
 }
 
 .text-section-headline {
-  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.75rem);
   line-height: 1.1;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -94,15 +94,15 @@ body {
 
 /* Senior-Friendly Touch Targets */
 .touch-zone {
-  min-height: 60px;
-  padding: 0 1.5rem;
-  border-radius: 16px;
+  min-height: 48px;
+  padding: 0 1.25rem;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   cursor: pointer;
 }
