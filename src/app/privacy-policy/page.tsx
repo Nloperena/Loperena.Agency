@@ -7,25 +7,25 @@ import Link from "next/link";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="bg-background text-foreground min-h-screen pb-40">
+    <div className="bg-background text-foreground min-h-screen pb-20">
       <Header />
-      <main className="pt-20 sm:pt-28 lg:pt-36 px-4 sm:px-6 lg:px-10 max-w-5xl mx-auto">
+      <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
         {/* Hero Section */}
-        <section className="mb-32">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-sm mb-6">Privacy Policy</h2>
-          <h1 className="text-5xl md:text-7xl font-black mb-10 leading-tight">
+        <section className="mb-24">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Privacy Policy</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">
             Your Privacy, Our Priority
           </h1>
-          <p className="text-xl text-foreground/60 font-bold leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
             We prioritize elderly home automation privacy in all radar-based systems. No data shared without consent.
           </p>
-          <p className="text-lg text-foreground/50 font-bold mt-6">
+          <p className="text-base text-foreground/50 font-bold mt-6">
             Last Updated: January 2025
           </p>
         </section>
 
         {/* Privacy Principles */}
-        <section className="mb-40">
+        <section className="mb-24">
           <div className="space-y-16">
             {[
               {
@@ -65,8 +65,8 @@ export default function PrivacyPolicy() {
         </section>
 
         {/* Data Collection */}
-        <section className="mb-40">
-          <h2 className="text-4xl font-black mb-8">Data Collection and Use</h2>
+        <section className="mb-24">
+          <h2 className="text-3xl md:text-4xl font-black mb-8">Data Collection and Use</h2>
           <div className="space-y-6 text-lg text-foreground/60 font-bold leading-relaxed">
             <p>
               We collect only the minimum data necessary to provide our radar-based home monitoring services. This includes:
@@ -92,8 +92,8 @@ export default function PrivacyPolicy() {
         </section>
 
         {/* Data Sharing */}
-        <section className="mb-40">
-          <h2 className="text-4xl font-black mb-8">Data Sharing and Disclosure</h2>
+        <section className="mb-24">
+          <h2 className="text-3xl md:text-4xl font-black mb-8">Data Sharing and Disclosure</h2>
           <div className="space-y-6 text-lg text-foreground/60 font-bold leading-relaxed">
             <p>
               We do not sell, rent, or share your personal information with third parties except in the following circumstances:
@@ -119,8 +119,8 @@ export default function PrivacyPolicy() {
         </section>
 
         {/* Security */}
-        <section className="mb-40">
-          <h2 className="text-4xl font-black mb-8">Security Measures</h2>
+        <section className="mb-24">
+          <h2 className="text-3xl md:text-4xl font-black mb-8">Security Measures</h2>
           <div className="space-y-6 text-lg text-foreground/60 font-bold leading-relaxed">
             <p>
               We implement industry-standard security measures to protect your information:
@@ -147,8 +147,8 @@ export default function PrivacyPolicy() {
         </section>
 
         {/* Your Rights */}
-        <section className="mb-40">
-          <h2 className="text-4xl font-black mb-8">Your Privacy Rights</h2>
+        <section className="mb-24">
+          <h2 className="text-3xl md:text-4xl font-black mb-8">Your Privacy Rights</h2>
           <div className="space-y-6 text-lg text-foreground/60 font-bold leading-relaxed">
             <p>
               You have the right to:
@@ -179,8 +179,8 @@ export default function PrivacyPolicy() {
         </section>
 
         {/* Resources Section */}
-        <section className="mb-40">
-          <h2 className="text-4xl font-black mb-8">Learn More About Radar Technology & Privacy</h2>
+        <section className="mb-24">
+          <h2 className="text-3xl md:text-4xl font-black mb-8">Learn More About Radar Technology & Privacy</h2>
           <p className="text-xl text-foreground/60 font-bold mb-8 leading-relaxed">
             We use industry-leading radar technology that prioritizes privacy. Here are trusted resources that explain how radar sensors work and why they're superior to cameras for senior care:
           </p>
@@ -225,7 +225,7 @@ export default function PrivacyPolicy() {
         </section>
 
         {/* Contact */}
-        <section className="mb-40">
+        <section className="mb-24">
           <div className="p-16 rounded-[60px] glass-aperture border-2 border-sage/20 text-center">
             <h3 className="text-4xl font-black mb-8">Questions About Privacy?</h3>
             <p className="text-xl text-foreground/60 font-bold mb-10 max-w-2xl mx-auto">

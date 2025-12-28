@@ -58,22 +58,22 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="bg-background text-foreground min-h-screen pb-40">
+    <div className="bg-background text-foreground min-h-screen pb-20">
       <Header />
-      <main className="pt-20 sm:pt-28 lg:pt-36 px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+      <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
         {/* Hero Section */}
-        <section className="mb-32 text-center">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-sm mb-6">Social Proof</h2>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-10 leading-[0.9] tracking-tighter text-bone">
+        <section className="mb-24 text-center">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Social Proof</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">
             Trusted by Neighbors <br className="hidden md:block" /> Across Central Florida.
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-bone/60 max-w-3xl mx-auto font-bold leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
             Real stories from seniors and their families in Lake Nona, The Villages, Windermere, and beyond.
           </p>
         </section>
 
         {/* Testimonials Grid */}
-        <section className="mb-40">
+        <section className="mb-24">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {testimonials.map((testimonial, i) => (
               <div key={i} className="p-10 rounded-[40px] glass-aperture border-2 border-white/5 hover:border-sage/40 transition-all flex flex-col h-full">
@@ -104,10 +104,10 @@ export default function Testimonials() {
         </section>
 
         {/* Case Studies Section */}
-        <section className="mb-40 py-24 px-10 rounded-[80px] bg-white/[0.02] border border-white/5">
-          <div className="text-center mb-20">
-            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-sm mb-6">Deep Dives</h2>
-            <h3 className="text-4xl md:text-6xl font-black mb-8">Case Studies</h3>
+        <section className="mb-24 py-16 px-8 rounded-[40px] bg-white/[0.02] border border-white/5">
+          <div className="text-center mb-12">
+            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Deep Dives</h2>
+            <h3 className="text-3xl md:text-5xl font-black mb-6">Case Studies</h3>
           </div>
           <div className="max-w-5xl mx-auto space-y-12">
             {[
@@ -143,10 +143,10 @@ export default function Testimonials() {
         </section>
 
         {/* Video Testimonials */}
-        <section className="mb-40">
-          <div className="text-center mb-16">
-            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-sm mb-6">Watch</h2>
-            <h3 className="text-4xl md:text-6xl font-black mb-8">Video Testimonials</h3>
+        <section className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Watch</h2>
+            <h3 className="text-3xl md:text-5xl font-black mb-6">Video Testimonials</h3>
             <p className="text-xl text-foreground/50 font-bold max-w-2xl mx-auto italic">
               Hear directly from families who have experienced our privacy-first smart home solutions.
             </p>
@@ -162,8 +162,8 @@ export default function Testimonials() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-24 px-10 rounded-[80px] bg-sage text-obsidian text-center">
-          <h2 className="text-4xl md:text-7xl font-black mb-8 leading-[0.9]">Ready to Join Your Neighbors?</h2>
+        <section className="py-16 px-8 rounded-[40px] bg-sage text-obsidian text-center">
+          <h2 className="text-3xl md:text-6xl font-black mb-6 leading-[0.9]">Ready to Join Your Neighbors?</h2>
           <p className="text-xl md:text-2xl font-bold mb-12 max-w-2xl mx-auto opacity-80 leading-relaxed">
             Discover the difference discreet, human-centered technology can make for your family.
           </p>

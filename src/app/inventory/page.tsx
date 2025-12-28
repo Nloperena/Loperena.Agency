@@ -18,19 +18,19 @@ export default function Inventory() {
     : null;
 
   return (
-    <div className="bg-background text-foreground min-h-screen pb-40">
+    <div className="bg-background text-foreground min-h-screen pb-20">
       <Header />
-      <main className="pt-20 sm:pt-28 lg:pt-36 px-4 sm:px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-sm mb-6">Inventory & Quotes</h2>
-          <h1 className="text-hero-headline mb-8">Master Hardware Catalog <br /> & Quote Generator.</h1>
-          <p className="text-2xl text-foreground/50 max-w-3xl mx-auto font-bold leading-relaxed">
+      <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
+        <div className="text-center mb-24">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Inventory & Quotes</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">Master Hardware Catalog <br className="hidden md:block" /> & Quote Generator.</h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
             Browse our complete product catalog and generate instant quotes for any bundle configuration.
           </p>
         </div>
 
         {/* Bundle Selector */}
-        <section className="mb-32">
+        <section className="mb-24">
           <h3 className="text-3xl font-black mb-8">Select a Bundle to Generate Quote</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {BUNDLE_CONFIGS.map((bundle) => (
@@ -55,7 +55,7 @@ export default function Inventory() {
 
         {/* Quote Breakdown */}
         {pricing && selectedBundleConfig && (
-          <section className="mb-32 p-12 rounded-[60px] glass-aperture border-2 border-sage/20">
+          <section className="mb-24 p-12 rounded-[60px] glass-aperture border-2 border-sage/20">
             <div className="flex items-center justify-between mb-12">
               <div>
                 <h3 className="text-4xl font-black mb-2">{selectedBundleConfig.name}</h3>

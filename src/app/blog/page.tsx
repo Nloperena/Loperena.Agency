@@ -61,22 +61,22 @@ export default function Blog() {
   const categories = ["Senior Safety", "Technology", "Privacy", "Safety", "All Posts"];
 
   return (
-    <div className="bg-background text-foreground min-h-screen pb-40">
+    <div className="bg-background text-foreground min-h-screen pb-20">
       <Header />
-      <main className="pt-20 sm:pt-28 lg:pt-36 px-4 sm:px-6 lg:px-10 max-w-7xl mx-auto">
+      <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
         {/* Hero Section */}
-        <section className="mb-32 text-center">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-sm mb-6">Expertise & Guides</h2>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-10 leading-[0.9] tracking-tighter text-bone">
+        <section className="mb-24 text-center">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Expertise & Guides</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">
             Helpful Guides for <br className="hidden md:block" /> Aging in Place.
           </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-bone/60 max-w-3xl mx-auto font-bold leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
             Resources to help you or your loved ones stay safe, connected, and in control—right here in Central Florida.
           </p>
         </section>
 
         {/* Featured Guide */}
-        <section className="mb-32">
+        <section className="mb-24">
           <div className="grid md:grid-cols-2 gap-12 items-center p-12 rounded-[60px] glass-aperture border-2 border-sage/20 relative overflow-hidden group">
             <div className="absolute inset-0 bg-sage/5 opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="aspect-video rounded-[40px] overflow-hidden border-2 border-white/5 shadow-2xl">
@@ -105,7 +105,7 @@ export default function Blog() {
         </section>
 
         {/* Post Grid */}
-        <section className="mb-40">
+        <section className="mb-24">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {posts.map((post, i) => (
               <Link key={i} href={`/blog/${post.slug}`} className="group">
@@ -127,11 +127,11 @@ export default function Blog() {
         </section>
 
         {/* Free Resource Section */}
-        <section className="mb-40 py-24 px-10 rounded-[80px] bg-white/[0.02] border border-white/5 text-center relative overflow-hidden">
+        <section className="mb-24 py-16 px-8 rounded-[40px] bg-white/[0.02] border border-white/5 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-sage to-transparent" />
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-sm mb-6">Free Download</h2>
-            <h3 className="text-4xl md:text-6xl font-black mb-8 text-bone">The Home Safety <br className="hidden md:block" /> Checklist.</h3>
+            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Free Download</h2>
+            <h3 className="text-3xl md:text-5xl font-black mb-6 text-bone">The Home Safety <br className="hidden md:block" /> Checklist.</h3>
             <p className="text-xl text-foreground/60 font-bold mb-12 leading-relaxed">
               Identify the top 10 hazards in your home with our free, professional-grade checklist used by our audit team.
             </p>
@@ -150,8 +150,8 @@ export default function Blog() {
 
 
         {/* Final CTA */}
-        <section className="py-24 px-10 rounded-[80px] bg-sage text-obsidian text-center">
-          <h2 className="text-4xl md:text-7xl font-black mb-8 leading-[0.9]">Ready to Thrive <br /> at Home?</h2>
+        <section className="py-16 px-8 rounded-[40px] bg-sage text-obsidian text-center">
+          <h2 className="text-3xl md:text-6xl font-black mb-6 leading-[0.9]">Ready to Thrive <br /> at Home?</h2>
           <p className="text-xl md:text-2xl font-bold mb-12 max-w-2xl mx-auto opacity-80 leading-relaxed">
             Let's discuss how we can help your family thrive in the home you love.
           </p>
