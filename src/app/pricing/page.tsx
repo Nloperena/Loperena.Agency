@@ -29,9 +29,9 @@ export default function Pricing() {
       <Header />
       <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Pricing</h2>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-bone">Transparent Pricing <br /> for Every Need.</h1>
-          <p className="text-lg text-foreground/50 max-w-2xl mx-auto font-bold leading-relaxed">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm mb-4 2xl:mb-6">Pricing</h2>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black mb-6 2xl:mb-10 leading-tight text-bone">Transparent Pricing <br /> for Every Need.</h1>
+          <p className="text-lg xl:text-xl 2xl:text-2xl text-foreground/50 max-w-2xl 2xl:max-w-4xl mx-auto font-bold leading-relaxed">
             Stay independent at home for a fraction of the cost of assisted living.
           </p>
           <div className="mt-10 p-6 rounded-[32px] glass-aperture border-2 border-sage/20 inline-block text-center">

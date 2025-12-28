@@ -53,11 +53,11 @@ export default function AreasWeServe() {
       <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
         {/* Hero Section */}
         <section className="mb-20 text-center">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Our Service Area</h2>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm mb-4 2xl:mb-6">Our Service Area</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black mb-6 2xl:mb-10 leading-[0.9] tracking-tighter text-bone">
             Proudly Serving the <br className="hidden md:block" /> 30-Minute Zone.
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-bone/60 max-w-2xl 2xl:max-w-4xl mx-auto font-bold leading-relaxed">
             We're your local neighbors based in Central Florida, committed to being there when you need us most.
           </p>
         </section>

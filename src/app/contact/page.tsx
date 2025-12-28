@@ -12,11 +12,11 @@ export default function Contact() {
       <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
         {/* Hero Section */}
         <section className="mb-20 text-center">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Connect With Us</h2>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm mb-4 2xl:mb-6">Connect With Us</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black mb-6 2xl:mb-10 leading-[0.9] tracking-tighter text-bone">
             Ready to Talk? <br className="hidden md:block" /> We're Your Local Neighbors.
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-bone/60 max-w-2xl 2xl:max-w-4xl mx-auto font-bold leading-relaxed">
             Based in Lake Nona and serving all of Central Florida. We're here to make home safer and simpler.
           </p>
         </section>
@@ -32,19 +32,19 @@ export default function Contact() {
                   Speak with a local neighbor about your needs. Schedule your $99 Safety Audit over the phone.
                 </p>
                 <a href="tel:+14077905891" className="inline-block w-full">
-                  <button className="w-full h-14 rounded-2xl bg-sage text-obsidian font-black text-lg hover:scale-105 transition-all">
+                  <button className="w-full h-14 xl:h-16 2xl:h-20 rounded-2xl 2xl:rounded-3xl bg-sage text-obsidian font-black text-lg xl:text-xl 2xl:text-2xl hover:scale-105 transition-all">
                     Call (407) 790-5891
                   </button>
                 </a>
               </div>
-              <div className="p-8 rounded-[40px] glass-aperture border-2 border-sage/20 text-center">
-                <Mail className="text-sage mb-4 mx-auto" size={40} />
-                <h3 className="text-2xl font-black mb-3 text-bone">Email Us</h3>
-                <p className="text-base text-foreground/60 font-bold mb-6">
+              <div className="p-8 xl:p-10 2xl:p-12 rounded-[40px] 2xl:rounded-[60px] glass-aperture border-2 border-sage/20 text-center">
+                <Mail className="text-sage mb-4 2xl:mb-6 mx-auto" size={40} />
+                <h3 className="text-2xl xl:text-3xl 2xl:text-4xl font-black mb-3 2xl:mb-4 text-bone">Email Us</h3>
+                <p className="text-base xl:text-lg 2xl:text-xl text-foreground/60 font-bold mb-6 2xl:mb-8">
                   Send us a message and we'll get back to you as soon as possible.
                 </p>
                 <a href="mailto:info@indepenest.com" className="inline-block w-full">
-                  <button className="w-full h-14 rounded-2xl border-2 border-sage text-foreground font-black text-lg hover:bg-sage/10 transition-all">
+                  <button className="w-full h-14 xl:h-16 2xl:h-20 rounded-2xl 2xl:rounded-3xl border-2 border-sage text-foreground font-black text-lg xl:text-xl 2xl:text-2xl hover:bg-sage/10 transition-all">
                     info@indepenest.com
                   </button>
                 </a>

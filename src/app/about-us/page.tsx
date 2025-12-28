@@ -20,10 +20,10 @@ export default function AboutUs() {
             />
           </div>
           <div className="relative z-10 pt-24 pb-16">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight tracking-tighter">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black mb-6 2xl:mb-10 leading-tight tracking-tighter">
               We're Your Local Neighbors <br className="hidden md:block" /> Helping Families Thrive.
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold italic leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-bone/60 max-w-2xl 2xl:max-w-4xl mx-auto font-bold italic leading-relaxed">
               "We provide the human bridge between thoughtful technology and the seniors we love."
             </p>
           </div>
@@ -33,9 +33,9 @@ export default function AboutUs() {
         <section className="mb-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs">Our Mission</h2>
-              <h3 className="text-3xl md:text-5xl font-black mb-6 leading-tight">Competing with Anxiety, Not Big Tech.</h3>
-              <p className="text-lg text-foreground/60 font-bold leading-relaxed">
+              <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm">Our Mission</h2>
+              <h3 className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-black mb-6 2xl:mb-8 leading-tight">Competing with Anxiety, Not Big Tech.</h3>
+              <p className="text-lg xl:text-xl 2xl:text-2xl text-foreground/60 font-bold leading-relaxed">
                 At IndepeNEST, we aren't competing with big tech stores—we're competing with anxiety. We provide the human bridge between thoughtful technology and the seniors we love.
               </p>
               <p className="text-lg text-foreground/60 font-bold leading-relaxed">
@@ -43,7 +43,7 @@ export default function AboutUs() {
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <Link href="tel:+14077905891">
-                  <button className="h-14 px-8 rounded-xl bg-sage text-obsidian font-black text-base hover:scale-105 transition-all">
+                  <button className="h-14 xl:h-16 2xl:h-20 px-8 xl:px-12 2xl:px-16 rounded-xl 2xl:rounded-2xl bg-sage text-obsidian font-black text-base xl:text-lg 2xl:text-xl hover:scale-105 transition-all">
                     Talk to a Local Neighbor
                   </button>
                 </Link>
@@ -63,8 +63,8 @@ export default function AboutUs() {
         {/* Why Choose Us Section */}
         <section className="mb-24 py-16 px-8 rounded-[40px] bg-white/[0.02] border border-white/5">
           <div className="text-center mb-12">
-            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Differentiators</h2>
-            <h3 className="text-3xl md:text-5xl font-black mb-6">Why Neighbors Choose Us</h3>
+            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm mb-4 2xl:mb-6">Differentiators</h2>
+            <h3 className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-black mb-6 2xl:mb-8">Why Neighbors Choose Us</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[

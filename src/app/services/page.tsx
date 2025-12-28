@@ -71,11 +71,11 @@ export default function Services() {
       <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
         {/* Hero Section */}
         <section className="mb-20 text-center">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Our Services</h2>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm mb-4 2xl:mb-6">Our Services</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black mb-6 2xl:mb-10 leading-[0.9] tracking-tighter text-bone">
             Discreet Technology <br className="hidden md:block" /> Designed for Real Life.
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-bone/60 max-w-2xl 2xl:max-w-4xl mx-auto font-bold leading-relaxed">
             We install and maintain senior-friendly smart features that work quietly in the background—enhancing safety and connection without complexity.
           </p>
         </section>
@@ -83,8 +83,8 @@ export default function Services() {
         {/* Detailed Features Grid */}
         <section className="mb-24">
           <div className="text-center mb-12">
-            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Our Technology</h2>
-            <h3 className="text-3xl md:text-5xl font-black mb-6 text-bone">Designed for Independence</h3>
+            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm mb-4 2xl:mb-6">Our Technology</h2>
+            <h3 className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-black mb-6 2xl:mb-8 text-bone">Designed for Independence</h3>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -124,9 +124,9 @@ export default function Services() {
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
                   <div className="absolute inset-0 bg-obsidian/40 group-hover:bg-transparent transition-all" />
                 </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h4 className="text-xl font-black mb-3">{item.title}</h4>
-                  <p className="text-sm text-foreground/50 font-bold leading-relaxed">
+                <div className="p-6 xl:p-8 2xl:p-10 flex flex-col flex-1">
+                  <h4 className="text-xl xl:text-2xl 2xl:text-3xl font-black mb-3 2xl:mb-4">{item.title}</h4>
+                  <p className="text-sm xl:text-base 2xl:text-lg text-foreground/50 font-bold leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -404,7 +404,7 @@ export default function Services() {
                   <p className="text-lg font-bold text-foreground/40">Monthly Stewardship: {plan.monthly}/mo</p>
                 </div>
                 <Link href="/pricing" className="block w-full">
-                  <button className="w-full h-14 rounded-xl border-2 border-sage text-sage font-black hover:bg-sage hover:text-obsidian transition-all text-base">
+                  <button className="w-full h-14 xl:h-16 2xl:h-20 rounded-xl 2xl:rounded-2xl border-2 border-sage text-sage font-black hover:bg-sage hover:text-obsidian transition-all text-base xl:text-lg 2xl:text-xl">
                     View Full Details
                   </button>
                 </Link>
@@ -474,12 +474,12 @@ export default function Services() {
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <Link href="tel:+14077905891">
-              <button className="h-16 px-12 rounded-2xl bg-obsidian text-bone font-black text-lg hover:scale-105 transition-all uppercase tracking-tighter">
+              <button className="h-16 xl:h-20 2xl:h-24 px-12 xl:px-16 2xl:px-20 rounded-2xl 2xl:rounded-3xl bg-obsidian text-bone font-black text-lg xl:text-xl 2xl:text-2xl hover:scale-105 transition-all uppercase tracking-tighter">
                 Talk to a Neighbor
               </button>
             </Link>
             <Link href="/pricing">
-              <button className="h-16 px-12 rounded-2xl border-2 border-obsidian text-obsidian font-black text-lg hover:bg-obsidian hover:text-bone transition-all uppercase tracking-tighter">
+              <button className="h-16 xl:h-20 2xl:h-24 px-12 xl:px-16 2xl:px-20 rounded-2xl 2xl:rounded-3xl border-2 border-obsidian text-obsidian font-black text-lg xl:text-xl 2xl:text-2xl hover:bg-obsidian hover:text-bone transition-all uppercase tracking-tighter">
                 View Pricing
               </button>
             </Link>

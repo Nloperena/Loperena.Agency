@@ -22,9 +22,9 @@ export default function Inventory() {
       <Header />
       <main className="pt-16 sm:pt-24 lg:pt-32 px-4 sm:px-6 lg:px-10 max-w-6xl mx-auto">
         <div className="text-center mb-24">
-          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Inventory & Quotes</h2>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] tracking-tighter text-bone">Master Hardware Catalog <br className="hidden md:block" /> & Quote Generator.</h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-bone/60 max-w-2xl mx-auto font-bold leading-relaxed">
+          <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs 2xl:text-sm mb-4 2xl:mb-6">Inventory & Quotes</h2>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black mb-6 2xl:mb-10 leading-[0.9] tracking-tighter text-bone">Master Hardware Catalog <br className="hidden md:block" /> & Quote Generator.</h1>
+          <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-bone/60 max-w-2xl 2xl:max-w-4xl mx-auto font-bold leading-relaxed">
             Browse our complete product catalog and generate instant quotes for any bundle configuration.
           </p>
         </div>

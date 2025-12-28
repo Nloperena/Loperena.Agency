@@ -85,10 +85,10 @@ export default function Home() {
             />
           </div>
           <div className="relative z-30 text-center max-w-4xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-bone mb-3 sm:mb-4 leading-[0.9] tracking-tighter">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl font-black text-bone mb-3 sm:mb-4 2xl:mb-6 leading-[0.9] tracking-tighter">
               Independence is the <br className="hidden md:block" /> Greatest Luxury.
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-bone/90 font-bold mb-6 sm:mb-8 leading-tight max-w-3xl mx-auto px-4 italic">
+            <p className="text-base sm:text-lg md:text-xl xl:text-2xl 2xl:text-3xl text-bone/90 font-bold mb-6 sm:mb-8 2xl:mb-12 leading-tight max-w-3xl 2xl:max-w-5xl mx-auto px-4 2xl:px-8 italic">
               Discreet, senior-friendly technology that helps you or your loved ones stay safe, connected, and in control—at home in Central Florida.
             </p>
             
@@ -108,7 +108,7 @@ export default function Home() {
             </div>
 
             <Link href="tel:+14077905891">
-              <button className="h-12 sm:h-14 px-6 sm:px-8 lg:px-10 rounded-lg sm:rounded-xl bg-sage text-obsidian font-black text-sm sm:text-base hover:scale-105 transition-all shadow-2xl uppercase tracking-tighter">
+              <button className="h-12 sm:h-14 lg:h-16 xl:h-20 2xl:h-24 px-6 sm:px-8 lg:px-10 xl:px-12 2xl:px-16 rounded-lg sm:rounded-xl lg:rounded-2xl bg-sage text-obsidian font-black text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl hover:scale-105 transition-all shadow-2xl uppercase tracking-tighter">
                 Talk to a Local Neighbor
               </button>
             </Link>
@@ -116,10 +116,10 @@ export default function Home() {
         </section>
 
         {/* Technology Features Grid */}
-        <section id="features" className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
-          <div className="mb-12 weighted-reveal opacity-0 translate-y-10 text-center">
-            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-[10px] mb-3">Our Technology</h2>
-            <h3 className="text-2xl md:text-4xl font-black mb-4">Designed for Independence</h3>
+        <section id="features" className="py-8 sm:py-12 lg:py-16 xl:py-20 2xl:py-24 px-4 sm:px-6 xl:px-8 2xl:px-12 max-w-6xl 2xl:max-w-7xl mx-auto">
+          <div className="mb-12 2xl:mb-16 weighted-reveal opacity-0 translate-y-10 text-center">
+            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-[10px] 2xl:text-xs mb-3 2xl:mb-4">Our Technology</h2>
+            <h3 className="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-black mb-4 2xl:mb-6">Designed for Independence</h3>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
@@ -169,9 +169,9 @@ export default function Home() {
                     {item.icon}
                   </div>
                 </div>
-                <div className="p-4 flex flex-col flex-1">
-                  <h4 className="text-lg font-black mb-2">{item.title}</h4>
-                  <p className="text-xs text-foreground/60 font-bold leading-relaxed">
+                <div className="p-4 xl:p-6 2xl:p-8 flex flex-col flex-1">
+                  <h4 className="text-lg xl:text-xl 2xl:text-2xl font-black mb-2 2xl:mb-3">{item.title}</h4>
+                  <p className="text-xs xl:text-sm 2xl:text-base text-foreground/60 font-bold leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -185,8 +185,8 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="weighted-reveal opacity-0 translate-y-10">
-                <h2 className="text-sage font-black uppercase tracking-[0.4em] text-[10px] mb-4">Privacy First</h2>
-                <h3 className="text-2xl md:text-4xl font-black mb-6">We Prioritize Your Privacy – No Constant Monitoring, Just Discreet Support.</h3>
+                <h2 className="text-sage font-black uppercase tracking-[0.4em] text-[10px] 2xl:text-xs mb-4 2xl:mb-6">Privacy First</h2>
+                <h3 className="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl font-black mb-6 2xl:mb-8">We Prioritize Your Privacy – No Constant Monitoring, Just Discreet Support.</h3>
                 <ul className="space-y-3">
                   {[
                     "No invasive cameras in private areas",
