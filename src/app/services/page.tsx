@@ -254,7 +254,7 @@ export default function Services() {
                 )}
               >
                 {/* Adjusting icon size for tab */}
-                {React.cloneElement(tab.icon as React.ReactElement, { size: 20 })}
+                {React.cloneElement(tab.icon as React.ReactElement<{ size?: number }>, { size: 20 })}
                 {tab.title}
               </button>
             ))}
