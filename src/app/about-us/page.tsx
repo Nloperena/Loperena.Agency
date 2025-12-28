@@ -102,7 +102,7 @@ export default function AboutUs() {
             <div className="order-2 lg:order-1 relative">
               <img 
                 src="https://media.licdn.com/dms/image/v2/D4E03AQGkyoWF6XLw_Q/profile-displayphoto-crop_800_800/B4EZk5boiUIkAI-/0/1757605170745?e=1768435200&v=beta&t=BnyNmbNEm-LKdOiEFvbZVfZTM6IcYJqf7WLEtVAsa8Q" 
-                alt="Nicholas, IndepeNEST Founder" 
+                alt="Nicholas Loperena, IndepeNEST Founder" 
                 className="rounded-[40px] shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute -bottom-6 -right-6 p-6 rounded-[24px] bg-sage text-obsidian font-black shadow-2xl">
@@ -112,9 +112,9 @@ export default function AboutUs() {
             </div>
             <div className="order-1 lg:order-2 space-y-6">
               <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs">Founder Heritage</h2>
-              <h3 className="text-3xl md:text-5xl font-black leading-tight">Nicholas.</h3>
+              <h3 className="text-3xl md:text-5xl font-black leading-tight">Nicholas Loperena</h3>
               <p className="text-lg text-foreground/60 font-bold leading-relaxed">
-                As a ninth-generation builder, Nicholas brings centuries of craftsmanship values to modern senior care technology.
+                As a ninth-generation builder, Nicholas Loperena brings centuries of craftsmanship values to modern senior care technology.
               </p>
               <p className="text-lg text-foreground/60 font-bold leading-relaxed">
                 Our building legacy spans generations, from Spain to Puerto Rico to Central Florida. This deep understanding of how homes are built allows us to integrate technology seamlessly and invisibly into your existing living space.
@@ -132,6 +132,36 @@ export default function AboutUs() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Personal Website Embed */}
+        <section className="mb-24">
+          <div className="text-center mb-8">
+            <h2 className="text-sage font-black uppercase tracking-[0.4em] text-xs mb-4">Learn More</h2>
+            <h3 className="text-3xl md:text-5xl font-black mb-4">Visit Nicholas Loperena's Website</h3>
+            <p className="text-lg text-foreground/60 font-bold max-w-2xl mx-auto">
+              Explore more about the founder's background, expertise, and personal journey.
+            </p>
+          </div>
+          <div className="rounded-[40px] overflow-hidden border-2 border-white/5 shadow-2xl">
+            <iframe
+              src="https://nicoloperena.com"
+              className="w-full h-[600px] border-0"
+              title="Nicholas Loperena Personal Website"
+              loading="lazy"
+              allow="fullscreen"
+            />
+          </div>
+          <div className="text-center mt-6">
+            <a 
+              href="https://nicoloperena.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sage font-black text-lg border-b-2 border-sage pb-1 hover:text-white hover:border-white transition-all inline-block"
+            >
+              Open in New Tab →
+            </a>
           </div>
         </section>
 
