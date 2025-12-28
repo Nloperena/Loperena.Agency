@@ -36,40 +36,48 @@ const Hero = () => {
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden bg-obsidian">
-      {/* Cinematic, Grainy Video Background */}
+      {/* Human Hero Background - Active Senior in Bright Living Room */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-obsidian/40 z-10" />
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 z-20 pointer-events-none" />
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="video-bg w-full h-full object-cover grayscale opacity-60 brightness-90"
-          aria-label="Slow-motion video of two people holding hands, representing care and support"
-        >
-          {/* A slow-motion shot of hands holding is specified in the prompt */}
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-holding-hands-of-an-elderly-person-4129-large.mp4" type="video/mp4" />
-        </video>
+        <div className="absolute inset-0 bg-obsidian/50 z-10" />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 z-20 pointer-events-none" />
+        <img 
+          src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+          alt="Active senior in bright, clean living room representing independence and comfort" 
+          className="video-bg w-full h-full object-cover grayscale opacity-50 brightness-75"
+        />
       </div>
 
       <div className="relative z-30 text-center max-w-7xl mx-auto flex flex-col items-center">
         <h1 
           ref={headlineRef}
-          className="text-hero-headline text-bone mb-24"
+          className="text-hero-headline text-bone mb-12"
         >
           Independence is <br /> the Greatest Luxury.
         </h1>
 
+        <p className="text-2xl md:text-3xl text-bone/80 font-bold mb-16 max-w-4xl leading-relaxed">
+          Simple technology that looks out for you, so your family doesn't have to worry. We're your local neighbors in Central Florida, making 'staying at home' safer and simpler.
+        </p>
+
         <div ref={cardRef} className="glass-aperture rounded-[60px] p-12 md:p-20 max-w-3xl w-full">
-          <h2 className="text-3xl font-bold text-bone/80 mb-12">How can we help your family thrive today?</h2>
-          
           <div className="grid md:grid-cols-2 gap-6">
-            <button className="touch-zone glow-sage">
-              I want to stay in my own home.
+            <button 
+              className="touch-zone glow-sage"
+              onClick={() => {
+                const element = document.getElementById('senior-path');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
+              I want to stay independent
             </button>
-            <button className="touch-zone glow-sage">
-              I want to ensure my parents are safe.
+            <button 
+              className="touch-zone glow-sage"
+              onClick={() => {
+                const element = document.getElementById('family-path');
+                element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
+              I'm looking after a parent
             </button>
           </div>
         </div>

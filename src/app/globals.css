@@ -16,7 +16,7 @@
   --foreground: #F9F9F7;
   --sage: #A4C5B0;
   --bone: #F9F9F7;
-  --font-size-base: 22px;
+  --font-size-base: 18px;
   --accent: var(--sage);
 }
 
@@ -28,17 +28,22 @@
   --obsidian: #F9F9F7;
 }
 
-/* Simplicity Mode (High Contrast Focus) */
+/* Senior Mode (High Contrast Warm White) */
 .simplicity-mode {
-  --background: #000000 !important;
-  --foreground: #FFFF00 !important;
-  --font-size-base: 26px !important;
+  --background: #F9F9F7 !important;
+  --foreground: #000000 !important;
+  --font-size-base: 20px !important;
 }
 
 .simplicity-mode * {
   animation: none !important;
   transition: none !important;
   font-family: sans-serif !important;
+}
+
+.simplicity-mode body {
+  background-color: #F9F9F7 !important;
+  color: #000000 !important;
 }
 
 body {
@@ -63,25 +68,25 @@ body {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(40px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 35px -12px rgba(0, 0, 0, 0.5);
 }
 
 .light-mode .glass-aperture {
   background: rgba(0, 0, 0, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Typography Scale */
 .text-hero-headline {
-  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  font-size: clamp(2rem, 6vw, 5rem);
   line-height: 1;
   font-weight: 800;
   letter-spacing: -0.04em;
 }
 
 .text-section-headline {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
   line-height: 1.1;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -89,9 +94,9 @@ body {
 
 /* Senior-Friendly Touch Targets */
 .touch-zone {
-  min-height: 72px;
-  padding: 0 2rem;
-  border-radius: 20px;
+  min-height: 60px;
+  padding: 0 1.5rem;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;

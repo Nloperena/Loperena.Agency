@@ -11,23 +11,23 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Home Technology for Seniors in Central Florida | Loperena Agency",
-  description: "Senior-friendly smart home technology in Lake Nona, The Villages, and Windermere. Aging in place solutions with discreet sensors, automatic lighting, and family connection. $99 Harmony Check available.",
+  title: "Privacy-First Senior Smart Home Solutions in Central Florida | IndepeNEST",
+  description: "Empower independent living with discreet radar-based fall detection and smart home tech for seniors in Orlando and Tampa. No cameras, full privacy. Book a safety audit today.",
   keywords: [
-    "smart home for seniors",
-    "aging in place technology",
-    "senior home automation Central Florida",
-    "smart home Lake Nona",
-    "smart home The Villages",
-    "smart home Windermere",
-    "senior safety technology",
-    "elder care technology",
-    "independent living technology",
-    "smart home for elderly"
+    "senior smart home Central Florida",
+    "privacy smart home for elderly Orlando",
+    "aging in place technology Tampa",
+    "fall detection without cameras Florida",
+    "discreet senior safety installations",
+    "independent living tech for seniors",
+    "radar-based home monitoring",
+    "non-invasive senior care tech",
+    "smart home safety audit Central Florida",
+    "elderly home automation privacy"
   ],
   openGraph: {
-    title: "Smart Home Technology for Seniors | Loperena Agency",
-    description: "Simple, caring technology that looks out for you. Independence Enablement in Central Florida.",
+    title: "Privacy-First Senior Smart Home Solutions in Central Florida | IndepeNEST",
+    description: "Empower independent living with discreet radar-based fall detection and smart home tech for seniors in Orlando and Tampa. No cameras, full privacy.",
     type: "website",
     locale: "en_US",
   },

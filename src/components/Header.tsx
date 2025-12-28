@@ -1,99 +1,84 @@
 "use client";
 
-import React from "react";
-import { useUI } from "@/context/UIContext";
+import React, { useState } from "react";
 import Link from "next/link";
-import { cn } from "@/utils/cn";
-import { Sun, Moon, Type } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
-  const { 
-    isSimpleMode, 
-    setIsSimpleMode, 
-    isLightMode, 
-    setIsLightMode,
-    fontSize,
-    setFontSize 
-  } = useUI();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { name: "About Us", href: "/about-us" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Inventory", href: "/inventory" },
-    { name: "How It Works", href: "/how-it-works" },
-    { name: "Contact", href: "/contact" },
+    { name: "Areas We Serve", href: "/areas-we-serve" },
+    { name: "Contact", href: "tel:+14077905891" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 p-6 md:p-8 flex justify-between items-center pointer-events-none">
-      <div className="flex items-center gap-12 pointer-events-auto">
-        <Link href="/" className="text-3xl font-black tracking-tighter text-bone flex items-center">
-          LOPERENA<span className="text-sage">.</span>
-        </Link>
-        
-        <nav className="hidden lg:flex gap-8 items-center">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              href={link.href} 
-              className="hover:text-sage transition-colors font-extrabold text-bone/60"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </nav>
-      </div>
-
-      <div className="flex items-center gap-4 pointer-events-auto">
-        {/* Font Size Adjuster */}
-        <div className="hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 rounded-2xl p-1">
-          <button 
-            onClick={() => setFontSize(Math.max(18, fontSize - 2))}
-            className="w-10 h-10 flex items-center justify-center text-bone/60 hover:text-bone"
-            aria-label="Decrease font size"
-          >
-            <Type size={16} />
-          </button>
-          <span className="text-xs font-black text-bone/40 w-8 text-center">{fontSize}</span>
-          <button 
-            onClick={() => setFontSize(Math.min(32, fontSize + 2))}
-            className="w-10 h-10 flex items-center justify-center text-bone/60 hover:text-bone"
-            aria-label="Increase font size"
-          >
-            <Type size={24} />
-          </button>
+    <header className="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/5">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-3 flex justify-between items-center">
+        <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 min-w-0">
+          <Link href="/" className="group flex flex-col shrink-0">
+            <span className="text-lg sm:text-xl lg:text-2xl font-black tracking-tighter text-bone flex items-center leading-none">
+              Indepe<span className="text-sage">NEST</span>
+            </span>
+            <span className="text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-sage/60 group-hover:text-sage transition-colors leading-none mt-0.5">
+              Secure Smart Homes
+            </span>
+          </Link>
+          
+          <nav className="hidden xl:flex gap-3 xl:gap-5 items-center">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                href={link.href} 
+                className="hover:text-sage transition-colors font-extrabold text-bone/60 text-[10px] lg:text-xs whitespace-nowrap"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
         </div>
 
-        {/* Light/Dark Toggle - More Prominent */}
-        <button 
-          onClick={() => setIsLightMode(!isLightMode)}
-          className="w-16 h-16 rounded-2xl bg-white/10 border-2 border-sage/30 flex items-center justify-center text-bone hover:border-sage hover:bg-white/15 transition-all shadow-lg shadow-sage/20"
-          aria-label={isLightMode ? "Switch to Dark Mode" : "Switch to Light Mode"}
-          title={isLightMode ? "Switch to Dark Mode" : "Switch to Light Mode"}
-        >
-          {isLightMode ? <Moon size={28} /> : <Sun size={28} />}
-        </button>
+        <div className="flex items-center gap-3 lg:gap-6 shrink-0">
+          <Link href="tel:+14077905891" className="hidden sm:block text-bone/60 font-black text-xs hover:text-sage transition-colors">
+            407-790-5891
+          </Link>
+          <Link href="tel:+14077905891">
+            <button className="h-10 px-5 rounded-lg bg-sage text-obsidian font-black hover:scale-105 transition-all uppercase tracking-tighter text-[10px] sm:text-xs shrink-0">
+              Secure Your Nest
+            </button>
+          </Link>
 
-        {/* Focus Mode Toggle */}
-        <button 
-          onClick={() => setIsSimpleMode(!isSimpleMode)}
-          className={cn(
-            "hidden md:flex items-center gap-3 px-6 h-14 rounded-2xl border transition-all font-black text-sm uppercase tracking-widest",
-            isSimpleMode 
-              ? "bg-yellow-400 border-yellow-400 text-black" 
-              : "bg-white/5 border-white/10 text-bone/50 hover:border-white/30"
-          )}
-        >
-          {isSimpleMode ? "Standard" : "Focus Mode"}
-        </button>
-        
-        <Link href="tel:+14070000000">
-          <button className="h-14 px-8 rounded-2xl bg-sage text-obsidian font-black hover:scale-105 transition-all uppercase tracking-tighter text-sm">
-            Call a Neighbor
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="xl:hidden w-10 h-10 flex items-center justify-center text-bone hover:text-sage transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </Link>
+        </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="xl:hidden border-t border-white/10 bg-background/95 backdrop-blur-md">
+          <nav className="px-4 py-6 space-y-4">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="block py-3 hover:text-sage transition-colors font-extrabold text-bone/60 text-lg"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

@@ -9,10 +9,10 @@ export function StructuredData() {
     script.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Loperena Agency",
+      "name": "IndepeNEST",
       "description": "Smart home technology for seniors in Central Florida. Aging in place solutions with discreet sensors, automatic lighting, and family connection.",
-      "url": "https://loperena.agency",
-      "telephone": "+14070000000",
+      "url": "https://indepenest.com",
+      "telephone": "+14077905891",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Lake Nona",

@@ -1,14 +1,16 @@
-import { MASTER_HARDWARE_TABLE, BUNDLE_CONFIGS, HARDWARE_MARKUP, AUDIT_FEE, AUDIT_CREDIT, type HardwareItem, type BundleConfig } from "@/data/hardware";
+import { MASTER_HARDWARE_TABLE, BUNDLE_CONFIGS, PROCUREMENT_STEWARDSHIP_FEE, AUDIT_FEE, AUDIT_CREDIT, LOYALTY_CREDIT_THRESHOLD, type HardwareItem, type BundleConfig } from "@/data/hardware";
 
 export interface PricingBreakdown {
   hardwareItems: Array<{
     item: HardwareItem;
     quantity: number;
-    unitPrice: number;
+    msrpPrice: number;
+    vettedPrice: number;
     totalPrice: number;
   }>;
-  hardwareSubtotal: number;
-  hardwareMarkup: number;
+  hardwareSubtotalMSRP: number;
+  stewardshipBundleFee: number;
+  loyaltyCredit: number;
   hardwareTotal: number;
   laborHours: number;
   laborRate: number;
@@ -24,33 +26,46 @@ export function calculateBundlePricing(bundleId: string): PricingBreakdown | nul
   if (!bundle) return null;
 
   const hardwareItems: PricingBreakdown["hardwareItems"] = [];
-  let hardwareSubtotal = 0;
+  let hardwareSubtotalMSRP = 0;
+
+  // Check if this bundle qualifies for loyalty credit
+  const hasLoyaltyCredit = bundle.stewardshipMonthly >= LOYALTY_CREDIT_THRESHOLD;
 
   bundle.hardwareItems.forEach(({ productName, quantity }) => {
     const item = MASTER_HARDWARE_TABLE.find(h => h.productName === productName);
     if (item) {
-      const unitPrice = item.estPrice * (1 + HARDWARE_MARKUP);
+      const msrpPrice = item.estPrice;
+      const vettedPrice = item.estPrice * (1 + PROCUREMENT_STEWARDSHIP_FEE);
+      // Calculate total price: if loyalty credit applies, use MSRP; otherwise use vetted price
+      const unitPrice = hasLoyaltyCredit ? msrpPrice : vettedPrice;
       const totalPrice = unitPrice * quantity;
-      hardwareSubtotal += totalPrice;
+      hardwareSubtotalMSRP += msrpPrice * quantity;
       
       hardwareItems.push({
         item,
         quantity,
-        unitPrice,
-        totalPrice
+        msrpPrice,
+        vettedPrice,
+        totalPrice: totalPrice // This will be MSRP-based if loyalty credit applies
       });
     }
   });
 
-  const hardwareMarkup = hardwareSubtotal * (HARDWARE_MARKUP / (1 + HARDWARE_MARKUP));
-  const hardwareTotal = hardwareSubtotal;
+  // Calculate stewardship bundle fee
+  const stewardshipBundleFee = hardwareSubtotalMSRP * PROCUREMENT_STEWARDSHIP_FEE;
+  
+  // Apply loyalty credit for Complete Plan (removes procurement fee)
+  const loyaltyCredit = hasLoyaltyCredit ? stewardshipBundleFee : 0;
+  
+  const hardwareTotal = hardwareSubtotalMSRP + stewardshipBundleFee - loyaltyCredit;
   const laborTotal = bundle.laborHours * bundle.laborRate;
   const totalSetup = hardwareTotal + laborTotal + AUDIT_FEE - AUDIT_CREDIT;
 
   return {
     hardwareItems,
-    hardwareSubtotal: hardwareSubtotal / (1 + HARDWARE_MARKUP),
-    hardwareMarkup,
+    hardwareSubtotalMSRP,
+    stewardshipBundleFee,
+    loyaltyCredit,
     hardwareTotal,
     laborHours: bundle.laborHours,
     laborRate: bundle.laborRate,
