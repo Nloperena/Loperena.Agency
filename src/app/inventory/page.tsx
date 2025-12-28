@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import { MASTER_HARDWARE_TABLE, BUNDLE_CONFIGS, type HardwareItem } from "@/data/hardware";
 import { calculateBundlePricing, getAllCategories } from "@/utils/pricing";
-import { Package, DollarSign, Wrench, CheckCircle2, ExternalLink } from "lucide-react";
+import { Package, DollarSign, Wrench, CheckCircle2, External } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
@@ -118,7 +118,7 @@ export default function Inventory() {
                         className="ml-6 p-3 rounded-2xl bg-sage/10 hover:bg-sage/20 transition-all"
                         title="View Product Page"
                       >
-                        <ExternalLink className="text-sage" size={20} />
+                        <External className="text-sage" size={20} />
                       </Link>
                     </div>
                   );
@@ -295,7 +295,7 @@ export default function Inventory() {
                               className="ml-4 p-3 rounded-2xl bg-sage/10 hover:bg-sage/20 transition-all"
                               title="View Product Page"
                             >
-                              <ExternalLink className="text-sage" size={20} />
+                              <External className="text-sage" size={20} />
                             </Link>
                           </div>
                         </div>

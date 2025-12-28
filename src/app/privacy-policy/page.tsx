@@ -2,7 +2,7 @@
 
 import React from "react";
 import Header from "@/components/Header";
-import { ShieldCheck, Lock, EyeOff, UserCheck, CheckCircle2, ExternalLink } from "lucide-react";
+import { ShieldCheck, Lock, EyeOff, UserCheck, CheckCircle2, External } from "lucide-react";
 import Link from "next/link";
 
 export default function PrivacyPolicy() {
@@ -213,7 +213,7 @@ export default function PrivacyPolicy() {
                     <div className="flex-1">
                       <h3 className="text-2xl font-black mb-2 group-hover:text-sage transition-colors flex items-center gap-2">
                         {resource.title}
-                        <ExternalLink size={18} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                        <External size={18} className="opacity-60 group-hover:opacity-100 transition-opacity" />
                       </h3>
                       <p className="text-lg text-foreground/50 font-bold">{resource.description}</p>
                     </div>
@@ -259,7 +259,7 @@ export default function PrivacyPolicy() {
                     <div className="flex-1">
                       <h3 className="text-2xl font-black mb-2 group-hover:text-sage transition-colors flex items-center gap-2">
                         {resource.title}
-                        <ExternalLink size={18} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                        <External size={18} className="opacity-60 group-hover:opacity-100 transition-opacity" />
                       </h3>
                       <p className="text-lg text-foreground/50 font-bold">{resource.description}</p>
                     </div>

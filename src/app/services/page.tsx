@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Header from "@/components/Header";
-import { CheckCircle2, Shield, Home, Crown, Radio, Mic, Bell, ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { CheckCircle2, Shield, Home, Crown, Radio, Mic, Bell, ChevronDown, ChevronUp, External } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
@@ -290,7 +290,7 @@ export default function Services() {
                         className="text-sage font-bold hover:text-white transition-colors flex items-center gap-2 group text-sm"
                       >
                         <span>{resource.name}</span>
-                        <ExternalLink size={14} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                        <External size={14} className="opacity-60 group-hover:opacity-100 transition-opacity" />
                       </a>
                     </li>
                   ))}
