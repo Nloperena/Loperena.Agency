@@ -2,7 +2,7 @@
 
 import React from "react";
 import Header from "@/components/Header";
-import { ShieldCheck, Lock, EyeOff, UserCheck, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Lock, EyeOff, UserCheck, CheckCircle2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 export default function PrivacyPolicy() {
